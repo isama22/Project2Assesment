@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>todo list</h1>
+    <ul>
+        <% todos.forEach( (t, idx) => { %>
+        <li>
+          <form action="/todos/<%= idx %>?_method=DELETE"
+            class="delete-form" method="POST">
+            <button type="submit">X</button>
+          </form>
+              <%= t.todo %> -
+            <%= t.done ? 'done' : 'not done' %>
+        </li>
+        <% }); %>
+      </ul>
+    <form action="/todos" method="POST" autocomplete="off">
+      <input type="text" name="todo">
+      <button type="submit">Save Todo</button>
+    </form>
+  </body>
+</html>
