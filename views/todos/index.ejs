@@ -6,6 +6,7 @@
   </head>
   <body>
     <h1>todo list</h1>
+    <% if (todos.length) { %>
     <ul>
         <% todos.forEach( (t, idx) => { %>
         <li>
@@ -18,7 +19,11 @@
         </li>
         <% }); %>
       </ul>
-    <form action="/todos" method="POST" autocomplete="off">
+  
+    <% } else { %>
+      <p>No todos yet</p>
+      <% } %>
+        <form action="/todos" method="POST" autocomplete="off">
       <input type="text" name="todo">
       <button type="submit">Save Todo</button>
     </form>

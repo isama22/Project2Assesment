@@ -1,8 +1,5 @@
-//its convention to name all models with a capital letter first
-
 const Todo = require('../models/todo');
-/* GET users listing. */
-// router.get('/', 
+
 
 const index = (req, res, next) => {
   res.render('todos/index', {

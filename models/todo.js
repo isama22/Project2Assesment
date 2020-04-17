@@ -1,8 +1,4 @@
-const todos = [
-    { todo: 'walk', done: true },
-    { todo: 'cook', done: false },
-    { todo: 'read', done: false }
-  ];
+const todos = [];
   const getAll = () => {
     return todos;
   }
