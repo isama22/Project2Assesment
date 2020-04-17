@@ -1,4 +1,6 @@
-const todos = [];
+const todos = [
+  { todo: String, done: false }
+];
   const getAll = () => {
     return todos;
   }
